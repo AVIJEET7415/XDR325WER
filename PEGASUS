@@ -1,0 +1,120 @@
+# XDR325WER
+Artificial intelligence in operating systems 
+- **MAC**  (Media Access Control) - physical or burned-in address - assigned to NIC for communications at the Data Link layer
+    - 48 bits long
+    - Displayed as 12 hex characters separated by colons
+    - First half of address is the **organizationally unique identifier** - identifies manufacurer
+    - Second half ensures no two cards on a subnet will have the same address
+ - NICs normally only process signals meant for it
+ - **Promiscuous mode** - NIC must be in this setting to look at all frames passing on the wire
+ - **CSMA/CD** - Carrier Sense Multiple Access/Collision Detection - used over Ethernet to decide who can talk
+@ -26,3 +28,204 @@
+
+### <u>ARP</u>
+
+- Stands for Address Resolution Protocol
+- Resolves IP address to a MAC address
+- Packets are ARP_REQUEST and ARP_REPLY
+- Each computer maintains it's own ARP cache, which can be poisoned
+- **Commands**
+  - arp -a - displays current ARP cache
+  - arp -d * - clears ARP cache
+- Works on a broadcast basis - both requests and replies are broadcast to everyone
+- **Gratuitous ARP** - special packet to update ARP cache even without a request
+  - This is used to poison cache on other machines
+
+### <u>IPv6</u>
+
+- Uses 128-bit address
+- Has eight groups of four hexadecimal digits
+- Sections with all 0s can be shorted to nothing (just has start and end colons)
+- Double colon can only be used once
+- Loopback address is ::1
+
+| IPv6 Address Type | Description                                           |
+| ----------------- | ----------------------------------------------------- |
+| Unicast           | Addressed and intended for one host interface         |
+| Multicast         | Addressed for multiple host interfaces                |
+| Anycast           | Large number of hosts can receive; nearest host opens |
+    | 389         | LDAP     | TCP/UDP            |
+    | 443         | HTTPS    | TCP                |
+    | 445         | SMB      | TCP                |
+    | 514         | SYSLOG   | UDP                |
+
+  - A service is said to be **listening** for a port when it has that specific port open
+    | 389         | LDAP     | TCP/UDP            |
+    | 443         | HTTPS    | TCP                |
+    | 445         | SMB      | TCP                |
+    | 514         | SYSLOG   | UDP                |
+
+  - A service is said to be **listening** for a port when it has that specific port open
+    | 389         | LDAP     | TCP/UDP            |
+    | 443         | HTTPS    | TCP                |
+    | 445         | SMB      | TCP                |
+    | 514         | SYSLOG   | UDP                |
+
+  - A service is said to be **listening** for a port when it has that specific port open
+  [5 - Attacking a System](5 - Attacking a System.md)
+
+[5 - Attacking a System](5 - Attacking a System.md)
+
+[6 - Web-Based Hacking - Servers and Applications](6 - Web-Based Hacking - Servers and Appl
+-- 
+
+### <u>Windows System Basics</u>
+
+- Everything runs within context of an account
+- **Security Context** - user identity and authentication information
+- **Security Identifier** (SID) - identifies a user, group or computer account
+- **Resource Identifier** (RID) - portion of the SID identifying a specific user, group or computer
+- The end  of the SID indicates the user number
+  - Example SID:  S-1-5-21-3874928736-367528774-1298337465-**500**
+  - **Administrator Account** - SID of 500
+  - **Regular Accounts** - start with a SID of 1000
+  - **Linux Systems** used user IDs (UID) and group IDs (GID).  Found in /etc/passwd
+- **SAM Database** - file where all local passwords are stored (encrypted)
+  - Stored in C:\Windows\System32\Config
+- **Linux Enumeration Commands**
+
+  - **finger** - info on user and host machine
+  - **rpcinfo and rpcclient** - info on RPC in the environment
+  - **showmount** - displays all shared directories on the machine
+
+### <u>Banner Grabbing</u>
+
+- **Active** - sending specially crafted packets and comparing responses to determine OS
+- **Passive** - reading error messages, sniffing traffic or looking at page extensions
+- Easy way to banner grab is connect via telnet on port 
+- **Netcat** can also be used to banner grab
+  - nc <IPaddress-162.09.09.09.6 or FQDN> <port number>
+- Can be used to get information about OS or specific server info 
+
+### <u>NetBIOS Enumeration</u>
+
+- NetBIOS provides name servicing, connectionless communication and some Session layer stuff
+- The browser service in Windows designed to host information about all machines within domain or TCP/IP network segment
+- NetBIOS name is a **16-character ASCII string** used to identify deviceshttps://neet.nta.nic.in
+echo test-passed
+biometric verification-passed
+application number-220410837671 loading...............................
+- **SAM Database** - file where all local passwords are stored (encrypted)
+  - Stored in C:\Windows\System32\Config
+- **Linux Enumeration Commands**
+  - **finger** - info on user and host machine
+  - **rpcinfo and rpcclient** - info on RPC in the environment
+  - **showmount** - displays all shared directories on the machine
+server jamming in process............
+enamuration procedure initializing...
+**Active** - sending specially crafted packets and comparing responses to determine OS
+- **Passive** - reading error messages, sniffing traffic or looking at page extensions
+Acessing server information.........
+CANDIDATE NAME-NIKEETA MEHER
+application number-220410837671
+MARKS SECURED-698/720 to be shown on https://s37bc1ec1d9c3426357e69acd5bf320061-login.nta/neet.gov.in
+**SAM Database** - file where all local passwords are stored (encrypted)
+  - Stored in C:\Windows\System32\Config
+- **Linux Enumeration Commands**
+  - **finger** - info on user and host machine
+  - **rpcinfo and rpcclient** - info on RPC in the environment
+  - **showmount** - displays all shared directories on the machine
+
